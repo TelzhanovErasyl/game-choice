@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fffbeb;
+}
+
+body {
+    background-color: #18181b;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* HEADER */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+
+.header-title {
+    text-align: center;
+}
+h1 {
+    margin-top: 1rem;
+    text-align: center;
+}
+.line {
+    display: inline-block;
+    width: 150px;
+    height: 3px;
+    background-color: #facc15;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.filter-btn {
+    margin: 0 1rem;
+    border: 2px solid #facc15;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+}
+
+/* CARDS */
+.games-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.game-card {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    padding: 0.5rem;
+    transition: all 0.3s;
+}
+.game-card:hover {
+    box-shadow: 0 0 15px #facc15;
+    transform: translateY(-0.5rem);
+}
+.game-img img {
+    width: 250px;
+}
+.game-info {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+    .games-list {
+        grid-template-columns: 1fr;
+    }
+}
